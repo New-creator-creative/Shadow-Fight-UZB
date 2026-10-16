@@ -1,0 +1,32 @@
+:root{--ac:#e8453c;--pn:#141826;--ln:#39415a}
+*{box-sizing:border-box;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:none}
+html,body{margin:0;height:100%;background:#05060a;color:#eceef5;font-family:system-ui,sans-serif;overflow:hidden}
+[hidden]{display:none!important}
+#game{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100vw,200vh);height:min(50vw,100vh)}
+#c{width:100%;height:100%;display:block;background:#000}
+#ui{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,6,10,.82)}
+.pn{max-height:100%;overflow:auto;padding:8px 14px;text-align:center;width:100%;touch-action:pan-y}
+h1{margin:4px 0;font-size:clamp(22px,7vh,42px);letter-spacing:4px;color:var(--ac);text-shadow:0 0 18px var(--ac)}
+h2,h3{margin:4px 0}
+button{font:inherit;font-size:clamp(12px,3.4vh,16px);color:#eceef5;background:var(--pn);border:1px solid var(--ln);border-radius:10px;padding:8px 12px;margin:3px;touch-action:manipulation}
+button.go{background:var(--ac);border-color:var(--ac);font-weight:700}
+button.on{background:var(--ac)}
+button:disabled{opacity:.35}
+.gr{display:flex;flex-wrap:wrap;justify-content:center}
+.pf{display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;margin-bottom:6px}
+.pf i{display:block;width:140px;height:8px;background:#000;border-radius:4px;overflow:hidden}
+.pf u{display:block;height:100%;background:#4aa8ff}
+.st{display:flex;justify-content:center;flex-wrap:wrap}
+.st button{width:84px}
+.st small{display:block;font-size:10px}
+.st .dn{border-color:#3fd16b}
+.st .bs{border-color:var(--ac)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:6px;background:#0008;border-radius:8px;padding:3px 8px;margin:3px auto;font-size:13px;text-align:left;max-width:560px}
+#ctl{position:fixed;inset:auto 0 0 0;display:flex;justify-content:space-between;align-items:flex-end;padding:0 max(12px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));pointer-events:none}
+#ctl button{pointer-events:auto}
+#ctl .g{display:flex;gap:8px;flex-wrap:wrap;max-width:46%}
+#ctl [data-k]{width:clamp(48px,15vh,70px);height:clamp(48px,15vh,70px);border-radius:50%;font-size:22px;padding:0;background:#141826cc}
+#ctl [data-k].on{background:var(--ac)}
+#pz{opacity:.7}
+#rot{display:none;position:fixed;inset:0;z-index:9;background:#05060a;align-items:center;justify-content:center;text-align:center;font-size:22px;line-height:1.6}
+@media (orientation:portrait){#rot{display:flex}}
